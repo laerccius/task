@@ -16,30 +16,36 @@ As a busy professional, I want to register, log in, and manage my tasks in one p
 - Protected endpoints for task CRUD
 - Seeded demo user and demo tasks
 - Responsive frontend for authentication and task management
+- Aspire-based orchestration for local developer startup
 
 ## Architecture
 
-- `TaskTrack.Domain`
+- `src/api/domain`
   - Entities and enums
-- `TaskTrack.Application`
+- `src/api/application`
   - DTOs, interfaces, and business services
-- `TaskTrack.Infrastructure`
+- `src/api/infrastructure`
   - SQLite access via ADO.NET, password hashing, JWT token creation, and database seeding
-- `TaskTrack.WebApi`
+- `src/api/web-api`
   - Controllers, dependency injection, authentication, and HTTP configuration
-- `tests/*`
-  - Unit tests for services, repositories, and controllers
-- `frontend/tasktrack-web`
+- `src/api/service-defaults`
+  - Shared Aspire defaults such as health checks and telemetry
+- `src/aspire/app-host`
+  - Orchestration layer for starting backend and frontend together
+- `src/frontend`
   - React frontend
+- `tests/api/*`
+  - Unit tests for services, repositories, and controllers
 
 ## Technical Decisions
 
-- .NET 8 Web API
+- ASP.NET Core Web API on .NET 10
 - SQLite for persistence
 - ADO.NET with `Microsoft.Data.Sqlite`
 - JWT bearer authentication
 - xUnit for tests
-- React for the frontend
+- React + Vite for the frontend
+- .NET Aspire AppHost on .NET 10 for local orchestration
 
 ## Delivery Order
 
@@ -51,7 +57,8 @@ As a busy professional, I want to register, log in, and manage my tasks in one p
 6. Expose API endpoints
 7. Add unit tests
 8. Add frontend
-9. Write README and presentation notes
+9. Add Aspire orchestration for local startup
+10. Write README and presentation notes
 
 ## Demo Data
 
@@ -63,5 +70,7 @@ As a busy professional, I want to register, log in, and manage my tasks in one p
 - Why task management is a good fit for CRUD plus auth
 - How the layers depend inward only
 - Why ADO.NET was chosen to meet the constraints
+- Why MediatR was intentionally not used
+- How Aspire improves startup without changing the core architecture
 - How tests protect the service layer and repositories
 - How GenAI was used critically rather than blindly

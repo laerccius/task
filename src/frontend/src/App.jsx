@@ -3,8 +3,6 @@ import { AuthPanel } from './components/AuthPanel';
 import { TaskForm } from './components/TaskForm';
 import { TaskList } from './components/TaskList';
 import { api } from './services/api';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 const emptyTask = {
   title: '',
