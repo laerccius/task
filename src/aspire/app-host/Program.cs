@@ -4,7 +4,8 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var api = builder.AddProject<web_api>("web-api");
 
-builder.AddNpmApp("frontend", "../../frontend/", "dev")
+builder.AddJavaScriptApp("frontend", "../../frontend")
+    .WithNpm()
     .WithReference(api)
     .WithHttpEndpoint(env: "PORT") 
     .WithExternalHttpEndpoints()

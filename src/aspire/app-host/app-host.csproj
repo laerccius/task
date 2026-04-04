@@ -10,6 +10,6 @@
     <ProjectReference Include="..\..\api\web-api\web-api.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.NodeJs" />
+    <PackageReference Include="Aspire.Hosting.JavaScript" />
   </ItemGroup>
 </Project>
