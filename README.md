@@ -93,7 +93,7 @@ The frontend receives the API base URL through `VITE_API_URL` from Aspire.
 If you want to run only the backend:
 
 ```bash
-cd /mnt/c/Users/Laerccius/Documents/projects/task/src/api/web-api
+cd task/src/api/web-api
 dotnet restore
 dotnet run
 ```
@@ -103,7 +103,7 @@ dotnet run
 If you want to run only the frontend:
 
 ```bash
-cd /mnt/c/Users/Laerccius/Documents/projects/task/src/frontend
+cd task/src/frontend
 npm install
 npm run dev
 ```
@@ -127,7 +127,7 @@ NuGet package versions are centralized with Central Package Management in [`Dire
 Run the test suite from the repository root:
 
 ```bash
-cd /mnt/c/Users/Laerccius/Documents/projects/task
+cd task
 dotnet test TaskTrack.slnx
 ```
 

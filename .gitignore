@@ -15,6 +15,9 @@
 **/usersecrets.json
 **/App_Data/*.mdf
 **/App_Data/*.ldf
+**/*.db
+**/*.sqlite
+**/*.sqlite3
 
 
 # --- SEÇÃO REACT / VITE (Recursiva) ---
