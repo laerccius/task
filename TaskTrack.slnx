@@ -1,0 +1,11 @@
+<Solution>
+  <Project  DefaultStartup="true" Path="src/aspire/app-host/app-host.csproj" />
+  <Project Path="src/api/application/application.csproj" />
+  <Project Path="src/api/domain/domain.csproj" />
+  <Project Path="src/api/infrastructure/infrastructure.csproj" />
+  <Project Path="src/api/service-defaults/service-defaults.csproj" />
+  <Project Path="src/api/web-api/web-api.csproj" />
+  <Project Path="tests/api/application.tests/application.tests.csproj" />
+  <Project Path="tests/api/infrastructure.tests/infrastructure.tests.csproj" />
+  <Project Path="tests/api/web-api.tests/web-api.tests.csproj" />
+</Solution>
